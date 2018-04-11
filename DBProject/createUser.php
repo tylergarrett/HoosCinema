@@ -9,11 +9,12 @@
  // Form the SQL query (an INSERT query)
  $sql="INSERT INTO website_users (username, password)
  VALUES
- ('$_POST[username]','$_POST[password]')";
+ ('$_POST[username2]','$_POST[password2]')";
 
  if (!mysqli_query($con,$sql))
  {
  die('Error: ' . mysqli_error($con));
  }
  echo "1 record added"; // Output to user
- mysqli_
+ mysqli_close($con);
+ ?>
