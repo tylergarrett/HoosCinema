@@ -1,0 +1,38 @@
+body {
+  font: 32px Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #0ca3d2;
+}
+
+h1 {
+	color: white;
+	position: relative;
+	text-align: center;
+}
+
+input[name=username] {
+	display: block;
+  	position: ;
+  	margin: 0 auto;
+  	width: 310px;
+  	background: white;
+  	border-radius: 3px;
+}
+
+input[name=password] {
+	display: block;
+  	position: relative;
+  	margin: 0 auto;
+  	width: 310px;
+  	background: white;
+  	border-radius: 3px;
+}
+
+input[name=submit] {
+	display: block;
+  	position: relative;
+  	margin: 0 auto;
+  	width: 310px;
+  	background: white;
+  	border-radius: 3px;
+  }
