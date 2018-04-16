@@ -16,5 +16,6 @@
  die('Error: ' . mysqli_error($con));
  }
  echo "1 record added"; // Output to user
+ header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/index.html");
  mysqli_close($con);
  ?>
