@@ -7,15 +7,15 @@
 <body>
 	<h1>Log In</h1>
 	<center>
-    <form method="post" action="index.html">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" name="submi" value="Login">
-    </form>
+    <form action="checkUser.php" method="post">
+    Username: <input type="text" name="usernameBox" placeholder="Username">
+	Password: <input type="password" name="passwordBox" placeholder="Password">
+	<input type="Submit">
+	</form>
     <h1>Create New User</h1>
     <form action="createUser.php" method="post">
-	Username: <input type="text" name="username2">
-	Password: <input type="text" name="password2">
+	Username: <input type="text" name="username2" placeholder="Username">
+	Password: <input type="password" name="password2" placeholder="Password">
 	<input type="Submit">
 	</form>
 	</center>
