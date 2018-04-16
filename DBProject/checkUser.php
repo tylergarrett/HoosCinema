@@ -19,7 +19,7 @@ mysqli_connect_error());
         $_SESSION['password'] = $_POST['passwordBox'];
         $_SESSION['loggedin'] = true;
         echo "Success";
-        header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/index.html");
+        header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/index.php");
 	exit();
 	}
     else
