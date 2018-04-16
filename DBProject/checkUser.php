@@ -17,6 +17,7 @@ mysqli_connect_error());
         session_start();
         $_SESSION['username'] = $_POST['usernameBox'];
         $_SESSION['password'] = $_POST['passwordBox'];
+        $_SESSION['loggedin'] = true;
         echo "Success";
         header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/index.html");
 	exit();
