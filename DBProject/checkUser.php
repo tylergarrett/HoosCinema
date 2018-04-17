@@ -24,7 +24,9 @@ mysqli_connect_error());
 	}
     else
     {
-        echo "Invalid username or password";
+        session_start();
+        $_SESSION['loginerror'] = "Incorrect username or password.";
+        header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/login.php");
         }   
 
     mysqli_close($con);
