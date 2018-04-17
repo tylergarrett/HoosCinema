@@ -3,6 +3,12 @@ session_start();
 if (!empty($_SESSION['loginerror'])) {
 	$message = "Incorrect username or password!";
 	echo "<script type='text/javascript'>alert('$message');</script>";
+	unset($_SESSION['loginerror']);
+}
+
+if ($_SESSION['newAcc'] == true) {
+	echo "Sign in with your new account!";
+	unset($_SESSION['newAcc']);
 }
 ?>
 
@@ -20,12 +26,8 @@ if (!empty($_SESSION['loginerror'])) {
 	Password: <input type="password" name="passwordBox" placeholder="Password">
 	<input type="Submit">
 	</form>
-    <h1>Create New User</h1>
-    <form action="createUser.php" method="post">
-	Username: <input type="text" name="username2" placeholder="Username">
-	Password: <input type="password" name="password2" placeholder="Password">
-	<input type="Submit">
-	</form>
+    <p>Don't have an account? Click <a href="register.html">Here</a> to sign up!</p>
+    
 	</center>
 </body>
 </html>

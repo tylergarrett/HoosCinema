@@ -1,4 +1,5 @@
 <?php
+ session_start();
  include_once("./library.php"); // To connect to the database
  $con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
  // Check connection
@@ -16,6 +17,7 @@
  die('Error: ' . mysqli_error($con));
  }
  echo "1 record added"; // Output to user
- header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/index.html");
+ $_SESSION['newAcc'] = true;
+ header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/login.php");
  mysqli_close($con);
  ?>
