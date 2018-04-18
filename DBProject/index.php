@@ -11,6 +11,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
+	<link href="bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery-1.6.2.min.js" type="text/javascript"></script> 
 	<script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
  	<title>HOOS Cinema</title>

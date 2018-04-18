@@ -18,6 +18,7 @@
  }
  echo "1 record added"; // Output to user
  $_SESSION['newAcc'] = true;
+ $_SESSION['loginUser'] = $_POST['username2'];
  header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/login.php");
  mysqli_close($con);
  ?>
