@@ -11,9 +11,19 @@ if (!isset($_SESSION['loggedin'])) {
 
 <html>
 <head>
-	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet"> 
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet"> 
+
+    <!-- JavaScript libraries -->
     <script src="js/jquery-1.6.2.min.js" type="text/javascript"></script> 
 	<script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
  	<title>HOOS Cinema</title>
 	<script>
 	$(document).ready(function() {
@@ -39,6 +49,16 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<div id="MovieResult">Search Result</div>
 
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">HOOSCinema</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+</nav>
+
+    <main role="main" class="container">
+
+    </main>
 
 </body>
 </html>
