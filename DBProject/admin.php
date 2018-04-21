@@ -48,11 +48,11 @@ if (!isset($_SESSION['loggedin'])) {
 
 <input type="Submit">
 </form>
-<h1>Delete from Movies</h1>
+<center><h1>Delete from Movies</h1>
 <form action="movieDelete.php" method="post">
 	Movie Title: <input type="text" name="deleteTitle">
 	<input type="Submit">
-</form>
+</form></center>
     </main>
 
 </body>
