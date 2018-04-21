@@ -18,9 +18,13 @@ mysqli_connect_error());
         $_SESSION['username'] = $_POST['usernameBox'];
         $_SESSION['password'] = $_POST['passwordBox'];
         $_SESSION['loggedin'] = true;
-        echo "Success";
-        header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/index.php");
-	exit();
+        //echo "Success";
+        if ($_SESSION['username'] == 'admin') {
+            header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/admin.php");
+        } else {
+            header("Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/index.php");
+	       }   
+    exit();
 	}
     else
     {
