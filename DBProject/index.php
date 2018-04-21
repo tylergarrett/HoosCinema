@@ -49,6 +49,11 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<div id="MovieResult">Search Result</div>
 
+	<form method="post" action="export.php">
+     <input type="submit" name="export" class="btn btn-success" value="Export" />
+    </form>
+
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">HOOSCinema</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
