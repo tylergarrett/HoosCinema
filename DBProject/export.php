@@ -1,4 +1,5 @@
-<?php  
+<?php
+session_start();
 //export.php  
 require_once('./library.php');
      $con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
@@ -11,7 +12,8 @@ mysqli_connect_error());
 $output = '';
 if(isset($_POST["export"]))
 {
- $query = "SELECT * FROM Movies";
+  $searchString = '%' . $_SESSION['searchVal'] . '%';
+ $query = "SELECT * FROM Movies WHERE title LIKE '" . $searchString . "'";
  $result = mysqli_query($con, $query);
  if(mysqli_num_rows($result) > 0)
  {

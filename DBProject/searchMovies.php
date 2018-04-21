@@ -1,4 +1,6 @@
 <?php
+        session_start();
+        $_SESSION['searchVal'] = $_GET['searchMovie'];
         require "dbutil.php";
         $db = DbUtil::loginConnection();
         
