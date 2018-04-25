@@ -110,8 +110,37 @@ if (!isset($_SESSION['loggedin'])) {
 		
 	});
 	</script>
+	</script>
+	<!-- Search current movies -->
+	<script>
+	$(document).ready(function() {
+		$( "#viewSubmit" ).click(function() {
+		
+			$.ajax({
+				url: 'currentSearch.php', 
+				data: {searchCurrent: $( "#viewSubmit" ).val()},
+				success: function(data){
+					$('#CurrentResult').html(data);	
+				
+				}
+			});
+		});
+		
+	});
+	</script>
 </head>
 <body>
+	<!-- Search by current -->
+	<center>
+	<h3>See What Movies Are Currently Playing!</h3>	
+
+	<form>
+     <input id ="viewSubmit" name="viewSubmit" class="btn btn-success" value="See Current Movies!" readonly/>
+     <div id="CurrentResult"></div>
+    </form>
+	</center>
+	<br>
+
 	<!-- Search by movie title -->
 	<center>
 	<h3>Search Movies!</h3>	
