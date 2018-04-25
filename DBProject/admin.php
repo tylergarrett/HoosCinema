@@ -53,6 +53,23 @@ if ($_SESSION['username'] != 'admin') {
 
 <input type="Submit">
 </form>
+<br>
+<center><h1>Insert into Directors</h1>
+<form action="directorInsert.php" method="post">
+	Director ID: <input type="number" name="d_id">
+	First Name: <input type="text" name="firstName">
+	Last Name: <input type="text" name="lastName">
+	Title: <input type="text" name="d_title">
+
+<input type="Submit">
+</form></center>
+<br>
+<center><h1>Delete from Directors</h1>
+<form action="directorDelete.php" method="post">
+	Director Last Name: <input type="text" name="d_name">
+	<input type="Submit">
+</form></center>
+<br>
 <center><h1>Delete from Movies</h1>
 <form action="movieDelete.php" method="post">
 	Movie Title: <input type="text" name="deleteTitle">
