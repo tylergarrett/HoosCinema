@@ -114,8 +114,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<div id="starResult">Search Result</div>
 
-	<form method="post" action="export.php">
-     <input type="submit" name="export" class="btn btn-success" value="Export" />
+	<form method="post" action="exportRatings.php">
+     <input type="submit" name="exportRatings" class="btn btn-success" value="Export" />
     </form>
 	</center>
 
