@@ -43,6 +43,7 @@ if (!isset($_SESSION['loggedin'])) {
 	</script>
 </head>
 <body>
+	<center>
 	<h3>Search Movies!</h3>	
            
 	<input class="xlarge" id="movieInput" type="search" size="30" placeholder="Movie Title Contains"/>
@@ -52,6 +53,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<form method="post" action="export.php">
      <input type="submit" name="export" class="btn btn-success" value="Export" />
     </form>
+	</center>
 
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
