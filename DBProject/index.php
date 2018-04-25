@@ -41,6 +41,22 @@ if (!isset($_SESSION['loggedin'])) {
 		
 	});
 	</script>
+	<script>
+	$(document).ready(function() {
+		$( "#movieInput2" ).change(function() {
+		
+			$.ajax({
+				url: 'releaseYearSearch.php', 
+				data: {searchYear: $( "#movieInput2" ).val()},
+				success: function(data){
+					$('#yearResult').html(data);	
+				
+				}
+			});
+		});
+		
+	});
+	</script>
 </head>
 <body>
 	<center>
@@ -49,6 +65,18 @@ if (!isset($_SESSION['loggedin'])) {
 	<input class="xlarge" id="movieInput" type="search" size="30" placeholder="Movie Title Contains"/>
 
 	<div id="MovieResult">Search Result</div>
+
+	<form method="post" action="export.php">
+     <input type="submit" name="export" class="btn btn-success" value="Export" />
+    </form>
+	</center>
+	<br>
+	<center>
+	<h3>Search Movies by Release Year!</h3>	
+           
+	<input class="xlarge" id="movieInput2" type="search" size="30" placeholder="Release Year Greater Than or Equal To"/>
+
+	<div id="yearResult">Search Result</div>
 
 	<form method="post" action="export.php">
      <input type="submit" name="export" class="btn btn-success" value="Export" />
