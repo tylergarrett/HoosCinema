@@ -100,8 +100,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<div id="yearResult">Search Result</div>
 
-	<form method="post" action="export.php">
-     <input type="submit" name="export" class="btn btn-success" value="Export" />
+	<form method="post" action="exportReleaseYear.php">
+     <input type="submit" name="exportReleaseYear" class="btn btn-success" value="Export" />
     </form>
 	</center>
 

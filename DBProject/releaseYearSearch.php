@@ -1,6 +1,6 @@
 <?php
         session_start();
-        //$_SESSION['searchVal'] = $_GET['searchMovie'];
+        $_SESSION['searchValYear'] = $_GET['searchYear'];
         require_once('./library.php');
         $db = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
         // Check connection
