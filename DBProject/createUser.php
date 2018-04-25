@@ -1,6 +1,7 @@
 <?php
  session_start();
  include_once("./library.php"); // To connect to the database
+ $USERNAME = 'CS4750mhh5rec';
  $con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
  // Check connection
  if (mysqli_connect_errno())
