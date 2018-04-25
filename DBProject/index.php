@@ -25,6 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
  	<title>HOOS Cinema</title>
+ 	<!-- Movie Search -->
 	<script>
 	$(document).ready(function() {
 		$( "#movieInput" ).change(function() {
@@ -41,6 +42,7 @@ if (!isset($_SESSION['loggedin'])) {
 		
 	});
 	</script>
+	<!-- Search release year -->
 	<script>
 	$(document).ready(function() {
 		$( "#movieInput2" ).change(function() {
@@ -57,8 +59,26 @@ if (!isset($_SESSION['loggedin'])) {
 		
 	});
 	</script>
+	<!-- Search stars -->
+	<script>
+	$(document).ready(function() {
+		$( "#movieInput3" ).change(function() {
+		
+			$.ajax({
+				url: 'starSearch.php', 
+				data: {searchStar: $( "#movieInput3" ).val()},
+				success: function(data){
+					$('#starResult').html(data);	
+				
+				}
+			});
+		});
+		
+	});
+	</script>
 </head>
 <body>
+	<!-- Search by movie title -->
 	<center>
 	<h3>Search Movies!</h3>	
            
@@ -70,6 +90,8 @@ if (!isset($_SESSION['loggedin'])) {
      <input type="submit" name="export" class="btn btn-success" value="Export" />
     </form>
 	</center>
+
+	<!-- Search by release year -->
 	<br>
 	<center>
 	<h3>Search Movies by Release Year!</h3>	
@@ -77,6 +99,20 @@ if (!isset($_SESSION['loggedin'])) {
 	<input class="xlarge" id="movieInput2" type="search" size="30" placeholder="Release Year Greater Than or Equal To"/>
 
 	<div id="yearResult">Search Result</div>
+
+	<form method="post" action="export.php">
+     <input type="submit" name="export" class="btn btn-success" value="Export" />
+    </form>
+	</center>
+
+	<!-- Search by stars -->
+	<br>
+	<center>
+	<h3>Search Movies by Rating!</h3>	
+           
+	<input class="xlarge" id="movieInput3" type="search" size="30" placeholder="Search for 1-5 Star Ratings"/>
+
+	<div id="starResult">Search Result</div>
 
 	<form method="post" action="export.php">
      <input type="submit" name="export" class="btn btn-success" value="Export" />
