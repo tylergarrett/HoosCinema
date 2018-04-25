@@ -1,6 +1,11 @@
 <?php
+session_start();
 class DbUtil{
-        public static $loginUser = "CS4750mhh5re";
+        if ($_SESSION['username'] == 'admin') {
+              public static $loginUser = "CS4750mhh5rec";       // admin ic C  
+        } else {
+              public static $loginUser = "CS4750mhh5reb";       // regular user is B
+        } 
         public static $loginPass = "mitchell";
         public static $host = "stardock.cs.virginia.edu"; // DB Host
         public static $schema = "CS4750mhh5re"; // DB Schema
