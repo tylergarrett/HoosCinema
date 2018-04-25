@@ -4,9 +4,14 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/login.php');
 	unset($_SESSION['loggedin']);
 	exit();
+} 
+if ($_SESSION['username'] != 'admin') {
+	header('Location: http://plato.cs.virginia.edu/~tjg3ea/DBProject/login.php');
+	exit();
 } else {
 	# Do Nothing - load page
 }
+
 ?>
 
 <html>
