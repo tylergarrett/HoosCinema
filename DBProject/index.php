@@ -76,6 +76,23 @@ if (!isset($_SESSION['loggedin'])) {
 		
 	});
 	</script>
+	<!-- Search directors -->
+	<script>
+	$(document).ready(function() {
+		$( "#movieInput4" ).change(function() {
+		
+			$.ajax({
+				url: 'directorSearch.php', 
+				data: {searchDirector: $( "#movieInput4" ).val()},
+				success: function(data){
+					$('#directorResult').html(data);	
+				
+				}
+			});
+		});
+		
+	});
+	</script>
 </head>
 <body>
 	<!-- Search by movie title -->
@@ -116,6 +133,20 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<form method="post" action="exportRatings.php">
      <input type="submit" name="exportRatings" class="btn btn-success" value="Export" />
+    </form>
+	</center>
+
+	<!-- Search by director -->
+	<br>
+	<center>
+	<h3>Search Movies by Director (Last Name)!</h3>	
+           
+	<input class="xlarge" id="movieInput4" type="search" size="30" placeholder="Search Directors by Last Name"/>
+
+	<div id="directorResult">Search Result</div>
+
+	<form method="post" action="exportDirectors.php">
+     <input type="submit" name="exportDirectors" class="btn btn-success" value="Export" />
     </form>
 	</center>
 
