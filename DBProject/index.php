@@ -128,6 +128,23 @@ if (!isset($_SESSION['loggedin'])) {
 		
 	});
 	</script>
+	<!-- Search actors -->
+	<script>
+	$(document).ready(function() {
+		$( "#movieInput6" ).change(function() {
+		
+			$.ajax({
+				url: 'actorSearch.php', 
+				data: {searchActor: $( "#movieInput6" ).val()},
+				success: function(data){
+					$('#ActorResult').html(data);	
+				
+				}
+			});
+		});
+		
+	});
+	</script>
 
 </head>
 <body>
@@ -152,6 +169,20 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<form method="post" action="export.php">
      <input type="submit" name="export" class="btn btn-success" value="Export" />
+    </form>
+	</center>
+
+	<!-- Search by actor -->
+	<br>
+	<center>
+	<h3>Search Movies by Actor/Actress! (Last Name)</h3>	
+           
+	<input class="xlarge" id="movieInput6" type="search" size="30" placeholder="Actor/Actress Last Name"/>
+
+	<div id="ActorResult">Search Result</div>
+
+	<form method="post" action="exportActor.php">
+     <input type="submit" name="exportActor" class="btn btn-success" value="Export" />
     </form>
 	</center>
 
