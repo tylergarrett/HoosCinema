@@ -10,14 +10,14 @@
         }
         $stmt = $db->stmt_init();
         
-        if($stmt->prepare("SELECT * FROM directors WHERE lastName LIKE ?") or die(mysqli_error($db))) {
+        if($stmt->prepare("SELECT firstName, lastName, title FROM directors WHERE lastName LIKE ?") or die(mysqli_error($db))) {
                 $searchString = '%' . $_GET['searchDirector'] . '%';
                 $stmt->bind_param(s, $searchString);
                 $stmt->execute();
-                $stmt->bind_result($director_id, $firstName, $lastName, $title);
-                echo "<table border=1><th>Director ID</th><th>First Name</th><th>Last Name</th><th>Title</th>\n";
+                $stmt->bind_result($firstName, $lastName, $title);
+                echo "<table border=1><th>First Name</th><th>Last Name</th><th>Title</th>\n";
                 while($stmt->fetch()) {
-                        echo "<tr><td>$director_id</td><td>$firstName</td><td>$lastName</td><td>$title</td></tr>";
+                        echo "<tr><td>$firstName</td><td>$lastName</td><td>$title</td></tr>";
                 }
                 echo "</table>";
         

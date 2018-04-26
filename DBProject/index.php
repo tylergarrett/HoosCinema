@@ -128,9 +128,10 @@ if (!isset($_SESSION['loggedin'])) {
 		
 	});
 	</script>
+
 </head>
 <body>
-	<!-- Search by current -->
+	<!-- Search by current movie -->
 	<center>
 	<h3>See What Movies Are Currently Playing!</h3>	
 
@@ -143,7 +144,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 	<!-- Search by movie title -->
 	<center>
-	<h3>Search Movies!</h3>	
+	<h3>Search Movies by Title!</h3>	
            
 	<input class="xlarge" id="movieInput" type="search" size="30" placeholder="Movie Title Contains"/>
 
@@ -181,6 +182,7 @@ if (!isset($_SESSION['loggedin'])) {
      <input type="submit" name="exportRatings" class="btn btn-success" value="Export" />
     </form>
 	</center>
+	<br>
 
 	<!-- Search by director -->
 	<br>
