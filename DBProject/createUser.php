@@ -9,9 +9,11 @@
  echo "Failed to connect to MySQL: " . mysqli_connect_error();
  }
  // Form the SQL query (an INSERT query)
+ $user = mysqli_real_escape_string($con, $_POST['username2']);
+ $pass = mysqli_real_escape_string($con, $_POST['password2']);
  $sql="INSERT INTO website_users (username, password)
  VALUES
- ('$_POST[username2]','$_POST[password2]')";
+ ('$user','$pass')";
 
  if (!mysqli_query($con,$sql))
  {

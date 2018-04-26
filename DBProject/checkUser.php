@@ -8,8 +8,9 @@
 mysqli_connect_error());
            return null;
      }
-
-    $query=mysqli_query($con,"SELECT * FROM website_users WHERE username='$_POST[usernameBox]' && password='$_POST[passwordBox]'");
+     $user = mysqli_real_escape_string($con, $_POST['usernameBox']);
+    $pass = mysqli_real_escape_string($con, $_POST['passwordBox']);
+    $query=mysqli_query($con,"SELECT * FROM website_users WHERE username='$user' && password='$pass'");
     $count=mysqli_num_rows($query);
     $row=mysqli_fetch_array($query);
 
